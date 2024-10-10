@@ -374,3 +374,8 @@ const bills = [
 ];
 
 // Start coding here
+function findTotalPrice(array) {
+  return array.reduce((sum, bill) => sum + bill.total, 0);
+}
+let totalBills = findTotalPrice(bills);
+console.log(`Total bill transaction is ${totalBills}`);
