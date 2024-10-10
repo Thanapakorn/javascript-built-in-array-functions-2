@@ -375,4 +375,9 @@ const bills = [
 
 // Start coding here
 
-const newBills;
+function checkMember(bills) {
+  const newBills = bills.filter((bill) => (bill.member ? true : false));
+  return newBills;
+}
+
+console.log(checkMember(bills));

@@ -374,4 +374,16 @@ const bills = [
 ];
 
 // Start coding here
-const billMembers;
+//
+
+function checkMember(bills) {
+  const billMembers = [];
+  bills.filter((bill) => {
+    if (bill.member) {
+      return billMembers.push(bill.member.name);
+    }
+  });
+  return billMembers;
+}
+
+console.log(checkMember(bills));

@@ -374,4 +374,23 @@ const bills = [
 ];
 
 // Start coding here
-const totalMembers;
+
+function checkMember(bills) {
+  const billMembers = [];
+  bills.filter((bill) => {
+    if (bill.member) {
+      return billMembers.push(bill.member.name);
+    }
+  });
+  const checkDuplicateMember = billMembers.filter((member, index) => {
+    return billMembers.indexOf(member) === index;
+  });
+  const totalMembers = checkDuplicateMember.length;
+  return totalMembers;
+
+  
+
+}
+
+
+console.log(`Unique Members Count: ${checkMember(bills)}`);
