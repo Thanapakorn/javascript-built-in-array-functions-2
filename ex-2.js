@@ -374,5 +374,8 @@ const bills = [
 ];
 
 // Start coding here
-
-const newBills;
+function findMmmberShip(array) {
+  return array.filter((info) => info.member !== null);
+}
+const memberInfo = findMmmberShip(bills);
+console.log(memberInfo);

@@ -374,4 +374,19 @@ const bills = [
 ];
 
 // Start coding here
-const totalMembers;
+function findTotalMember(array) {
+  const nameinfo = array
+    .filter((bill) => bill.member !== null)
+    .map((bill) => bill.member.name);
+console.log(nameinfo)
+
+  const newName = nameinfo.filter(
+    (name, index) => nameinfo.indexOf(name) === index
+  );
+  return newName.length;
+}
+
+
+
+const totalMembers = findTotalMember(bills);
+console.log(`Unique Members Count: ${totalMembers}`);
